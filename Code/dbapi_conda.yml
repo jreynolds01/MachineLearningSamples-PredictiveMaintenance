@@ -1,0 +1,24 @@
+## Goal of this file is to automate the creation of an env for the AML sdk as much as possible
+
+name: databricksapi
+
+## NOTE: I pip in my base env is updated to be 18.0
+## could add conda-forge so that pip can be current.
+## o.w. the most current one on win64 is very old...
+## adding conda-forge makes it take quite a bit longer.
+#  - conda-forge
+channels:
+  - defaults
+  - conda-forge
+
+dependencies:
+  - python=3.6   # or 2.7
+  ## - cython
+  ## - numpy
+  ## - nb_conda
+  - python-dotenv
+  - requests
+  - ipykernel
+  - pip:
+    ## - azureml-sdk[notebooks,contrib] 
+    ## - azure-cli
